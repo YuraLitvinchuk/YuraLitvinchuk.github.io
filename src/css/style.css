@@ -54,8 +54,14 @@ nav {
     color: #e88604;
 }
 
-.menu li a:active {
+.menu ul li a:active {
     transform: scale(1.1);
+    color:#e88604;
+}
+
+.menu li a.active {
+    transform: scale(1.1);
+    color:#e88604;
 }
 
 .white-btn:visited {
@@ -272,17 +278,20 @@ main {
     text-align: center;
     margin-top: 60px;
     margin-bottom: 25px;
-    -webkit-animation: infophotocome 4s ease;
-    -o-animation: infophotocome 4s ease;
-    animation: infophotocome 4s ease;
 }
 
-.info_container p {
+.show{
     font-size: 17px;
     font-family: 'Calibri', sans-serif;
     text-align: justify;
     color: #3f495a;
     font-weight: bold;
+}
+
+[data-aos="new-animation"] {
+}
+
+[data-aos="new-animation"].aos-animate{
     -webkit-animation: infocontainertxtcome 4s ease;
     -o-animation: infocontainertxtcome 4s ease;
     animation: infocontainertxtcome 4s ease;
@@ -321,16 +330,6 @@ main {
     transform: scale(1.1);
 }
 
-@keyframes infophotocome {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
 @keyframes infocontainertxtcome {
 
     0%,
@@ -364,9 +363,11 @@ main {
     font-weight: bold;
     text-transform: uppercase;
     padding-top: 105px;
+/*
     -webkit-animation: skillsIconCome 4s;
     -o-animation: skillsIconCome 4s;
     animation: skillsIconCome 4s;
+*/
 }
 
 .skills_icon {
@@ -376,9 +377,11 @@ main {
     flex-basis: auto;
     width: 100%;
     padding: 100px 0px;
+/*
     -webkit-animation: skillsIconCome 4s;
     -o-animation: skillsIconCome 4s;
     animation: skillsIconCome 4s;
+*/
 }
 
 .web_design h4 {
@@ -394,6 +397,7 @@ main {
     color: #3f495a;
 }
 
+/*
 @keyframes skillsIconCome {
     from {
         margin-left: -1500px;
@@ -403,6 +407,7 @@ main {
         margin: 0px;
     }
 }
+*/
 
 @media(max-width:991px) {
     .skills_icon {
@@ -434,13 +439,6 @@ main {
     color: #3f495a;
     font-family: 'Calibri', sans-serif;
     margin-top: 40px;
-}
-
-.case_insert p {
-    text-align: center;
-    max-width: 100%;
-    height: auto;
-    margin: 40px 0px;
 }
 
 .case_site {
@@ -567,9 +565,13 @@ main {
 .cost_calculation p span {
     float: right;
     color: #1c2534;
-    font-size: 29px;
+    font-size: 1em;
 }
 
+.pop{
+    margin-left: 45%;
+    margin-bottom: 2%;
+}
 /*----------------STATS------------------------------------------*/
 
 .stats {
@@ -587,9 +589,11 @@ main {
 }
 
 .stats {
+/*
     -webkit-animation: statsCome 3s ease-out;
     -o-animation: statsCome 3s ease-out;
     animation: statsCome 3s ease-out;
+*/
 }
 
 .stats_icon {
@@ -617,6 +621,7 @@ main {
 }
 
 
+/*
 @keyframes statsCome {
     from {
         opacity: 0;
@@ -626,6 +631,7 @@ main {
         opacity: 1;
     }
 }
+*/
 
 @media(max-width:780px) {
     .stats_icon {
@@ -641,7 +647,7 @@ main {
 
 .reviews_container {
     text-align: center;
-    margin: 105px 0px 100px 0px;
+    margin: 105px 0px 0px 0px;
 }
 
 .reviews_container h2 {
@@ -661,13 +667,15 @@ main {
     font-size: 16px;
     font-family: 'Calibri', sans-serif;
     color: #243042;
+    text-indent: 40px;
 }
 
 p.reviews_owner {
-    margin: 40px 0px 50px;
+    margin: 40px 0px 0px 0px;
     text-align: center;
     font-size: 16px;
     color: #243042;
+    text-indent: none;
 }
 
 p.reviews_owner b {
@@ -848,6 +856,7 @@ footer .container textarea {
     font-weight: bold;
 }
 
+
 @media(max-width:715px) {
     .footer_icon {
         flex-direction: column;
@@ -867,4 +876,17 @@ footer .container textarea {
         margin: 0% 40%;
     }
 
+}
+
+@media(max-width:420px){
+    .cost_calculation p span {
+        float: none;
+    }
+}
+
+@media(max-width:768px){
+    .pop{
+    margin-left: 30%;
+    margin-bottom: 2%;
+}
 }
