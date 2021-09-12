@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../src/css/animate.min.css">
+    <link rel="stylesheet" href="../src/fotorama-4.6.4/fotorama.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Андрей Браун - Веб-разработчик</title>
 </head>
 
@@ -28,24 +30,24 @@
                     <div class="px-0 col-xxl-6 col-xl-7 col-md-8 offset-xxl-4 offset-xl-2 offset-lg-1 d-none d-lg-block">
                         <div class="menu">
                             <ul>
-                                <li><a href="#">Обо мне</a></li>
-                                <li><a href="#">Услуги</a></li>
-                                <li><a href="#">Кейсы</a></li>
-                                <li><a href="#">Прайс</a></li>
-                                <li><a href="#">Отзывы</a></li>
-                                <li><a href="#">Контакты</a>
+                                <li><a href="#info" class="active">Обо мне</a></li>
+                                <li><a href="#skills">Услуги</a></li>
+                                <li><a href="#case">Кейсы</a></li>
+                                <li><a href="#price">Прайс</a></li>
+                                <li><a href="#reviews">Отзывы</a></li>
+                                <li><a href="#contacts">Контакты</a>
                             </ul>
                         </div>
                     </div>
                     <div class="col-5 d-flex d-lg-none flex-column justify-content-center align-items-end">
                         <div class="dropdown"> <a class="btn btn-outline-secondary dropdown-toggle white-btn" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Навигация</a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Обо мне</a></li>
-                                <li><a class="dropdown-item" href="#">Услуги</a></li>
-                                <li><a class="dropdown-item" href="#">Кейсы</a></li>
-                                <li><a class="dropdown-item" href="#">Прайс</a></li>
-                                <li><a class="dropdown-item" href="#">Отзывы</a></li>
-                                <li><a class="dropdown-item" href="#">Контакты</a></li>
+                                <li><a class="dropdown-item active" href="#info">Обо мне</a></li>
+                                <li><a class="dropdown-item" href="#skills">Услуги</a></li>
+                                <li><a class="dropdown-item" href="#case">Кейсы</a></li>
+                                <li><a class="dropdown-item" href="#price">Прайс</a></li>
+                                <li><a class="dropdown-item" href="#reviews">Отзывы</a></li>
+                                <li><a class="dropdown-item" href="#contacts">Контакты</a></li>
                             </ul>
                         </div>
                     </div>
@@ -53,8 +55,9 @@
             </div>
         </nav>
     </header>
+
     <main>
-        <section class="main">
+        <section class="main section">
             <div class="container h-100">
                 <div class="row align-items-center h-100">
                     <div class="col-lg-6 mt-5 pt-5">
@@ -82,25 +85,27 @@
             </div>
         </section>
     </main>
-    <div class="info">
+
+    <section class=" info section" id="info">
         <div class="container">
             <div class="info_container">
                 <h2>Обо мне</h2>
                 <div class="title_bar"> <img src="img/icon/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png" alt="Can't find"> </div>
-                <div class="info_photo img-fluid"> <img src="img/%D1%84%D0%BE%D1%82%D0%BA%D0%B0.png" alt="Can't find"> </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error saepe perspiciatis ullam totam et consectetur cupiditate accusamus consequuntur, iusto, laudantium dolores esse. Dolorum, tenetur veritatis. Optio, amet consectetur magni. Corporis.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum fugiat molestias odit nulla, natus esse quis impedit similique aspernatur quidem doloribus ipsum, minima harum laboriosam, mollitia aliquid cupiditate suscipit.</p>
+                <div class="info_photo img-fluid" data-aos="fade-in"> <img src="img/%D1%84%D0%BE%D1%82%D0%BA%D0%B0.png" alt="Can't find"> </div>
+                <p class="show" data-aos="new-animation" data-aos-duration="500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error saepe perspiciatis ullam totam et consectetur cupiditate accusamus consequuntur, iusto, laudantium dolores esse. Dolorum, tenetur veritatis. Optio, amet consectetur magni. Corporis.</p>
+                <p class="show" data-aos="new-animation" data-aos-duration="500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum fugiat molestias odit nulla, natus esse quis impedit similique aspernatur quidem doloribus ipsum, minima harum laboriosam, mollitia aliquid cupiditate suscipit.</p>
                 <form action="">
                     <input type="submit" value="Скачать резюме">
                 </form>
             </div>
         </div>
-    </div>
-    <div class="skills">
+    </section>
+
+    <section class="skills section" id="skills">
         <div class="container h-100">
             <div class="row">
                 <div class="col-xxl-12">
-                    <div class="skills_container">
+                    <div class="skills_container" data-aos="fade-right">
                         <div class="skills_head">
                             <h2>Что я умею</h2>
                             <div class="title_bar"> <img src="img/icon/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png" alt=""> </div>
@@ -131,15 +136,21 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="case">
+    </section>
+
+    <section class="case section" id="case">
         <div class="case_title">
             <h2>Кейсы</h2>
             <div class="title_bar"> <img src="img/icon/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png" alt=""> </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos assumenda provident aut ratione suscipit distinctio animi eaque, placeat magni possimus.</p>
         </div>
-        <div class="case_insert">
-            <p><img src="img/%D1%84%D0%BE%D1%82%D0%BA%D0%B02.png" class="img-fluid img-thumbnail" alt=""></p>
+        <div class="container">
+            <div class="fotorama" data-width="100%" data-ratio="800/600" data-loop="true" data-nav="thumbs" data-autoplay="3000" data-aos="fade-in">
+                <img src="img/%D1%84%D0%BE%D1%82%D0%BA%D0%B02.png" alt="">
+                <img src="../src/img/SliderOne.jpg" alt="">
+                <img src="../src/img/sliderTwo.jpg" alt="">
+                <img src="../src/img/sliderThree.jpg" alt="">
+            </div>
         </div>
         <div class="container">
             <div class="case_info">
@@ -156,14 +167,14 @@
                 </div>
             </div>
         </div>
-
-
+    </section>
+    <section class="calculation section" id="calc">
         <div class="container clearfix">
             <div class="col-xxl-10 xl-10 lg-10 mt-10">
-                <div class="cost_calculation">
+                <div class="cost_calculation" id="price">
                     <h2>Расчет стоимости</h2>
                     <h3>Тип сайта</h3>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select typee" aria-label="siteType">
                         <option selected>Выберите пункт...</option>
                         <option value="1">Сайт-визитка</option>
                         <option value="2">Корпоративный сайт</option>
@@ -171,14 +182,14 @@
                         <option value="4">Интернет-магазин</option>
                     </select>
                     <h3>Дизайн</h3>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select designe" aria-label="designType">
                         <option selected>Выберите пункт...</option>
                         <option value="1">Интерфейсный</option>
                         <option value="2">Динамический</option>
                         <option value="3">Полиграфический</option>
                     </select>
                     <h3>Адаптивность</h3>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select adapt" aria-label="adaptiveType">
                         <option selected>Выберите пункт...</option>
                         <option value="1">Фиксированная верстка</option>
                         <option value="2">Резиновая верстка</option>
@@ -186,14 +197,37 @@
                         <option value="4">Отзывчивая верстка</option>
                     </select>
                     <hr>
-                    <p>Сроки <span>0</span></p>
-                    <p>Стоимость <span>0</span></p>
+                    <p>Сроки <span class="deadline">0</span></p>
+                    <p>Стоимость <span class="price">0</span></p>
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-lg pop" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Получи скидку!
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Тебе повезло, ты не такой как все</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    При первом заказе скидка 10%.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="stats">
+    <section class="stats">
         <div class="stats_title">
             <h2>Немного статистики</h2>
             <div class="title_bar"> <img src="img/icon/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png" alt=""> </div>
@@ -201,41 +235,64 @@
         <div class="stats_icon">
             <div class="stats_icon_blocks">
                 <div class="stats_icon_img"><img src="img/icon/%D1%81%D0%BC%D0%B0%D0%B9%D0%BB.png" alt=""></div>
-                <h5>120</h5>
+                <h5 class="stats_count">120</h5>
                 <p>Счастливых клиентов</p>
             </div>
             <div class="stats_icon_blocks">
                 <div class="stats_icon_img"><img src="img/icon/%D1%81%D0%BA%D0%BE%D0%B1%D0%BA%D0%B8.png" alt=""></div>
-                <h5>4,600</h5>
+                <h5 class="stats_count">4600</h5>
                 <p>Часов работы</p>
             </div>
             <div class="stats_icon_blocks">
                 <div class="stats_icon_img"><img src="img/icon/%D0%B3%D0%B0%D0%BB%D0%BE%D1%87%D0%BA%D0%B0.png" alt=""></div>
-                <h5>340</h5>
+                <h5 class="stats_count">340</h5>
                 <p>Проектов завершено</p>
             </div>
             <div class="stats_icon_blocks">
                 <div class="stats_icon_img"><img src="img/icon/%D0%BA%D1%83%D0%B1%D0%BE%D0%BA.png" alt=""></div>
-                <h5>23</h5>
+                <h5 class="stats_count">23</h5>
                 <p>Наград получено</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container">
-        <div class="reviews">
+    <section class="reviews section" id="reviews">
+        <div class="container">
             <div class="reviews_container">
                 <h2>Отзывы</h2>
                 <div class="title_bar"> <img src="img/icon/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png" alt=""> </div>
-                <div class="reviews_photo"> <img src="img/reviews.png" alt=""> </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo nisi esse vel nobis minima quaerat, sed, quasi ipsam vitae error culpa doloremque! Ipsum neque ut quas tempora distinctio possimus, consectetur debitis, provident, veniam laudantium minima. Minima sequi modi quo repellat, necessitatibus dicta blanditiis eius ex sunt ab quas non dolore, consectetur in aliquid obcaecati, officia ut reprehenderit labore expedita. Voluptatibus dolor porro sit fugit, laudantium harum quidem assumenda totam odio dolorem iste aperiam ipsum magni minima temporibus explicabo, fugiat soluta sint, reprehenderit vero culpa, adipisci aliquid suscipit tempora. Voluptate eos quod non optio culpa similique natus ex quae assumenda excepturi.</p>
-                <p class="reviews_owner"><b>Михаил</b>, ген.директор ПАО"Газпром".</p> <img src="img/%D0%9E%D1%80%D0%B0%D0%BD%D0%B6.png" alt=""> <img src="img/%D0%9E%D1%80%D0%B0%D0%BD%D0%B6%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png" alt=""> <img src="img/%D0%9E%D1%80%D0%B0%D0%BD%D0%B6%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png" alt="">
+
+                <div class="container reviews_cont">
+                    <div class="fotorama" data-width="100%" data-height="100%" data-arrows="false" data-loop="true" data-autoplay="3000" data-navposition="top">
+                        <div class="reviews_change">
+                            <div class="reviews_photo" data-aos="fade-in">
+                                <img src="img/reviews.png" alt="">
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo nisi esse vel nobis minima quaerat, sed, quasi ipsam vitae error culpa doloremque! Ipsum neque ut quas tempora distinctio possimus, consectetur debitis, provident, veniam laudantium minima. Minima sequi modi quo repellat, necessitatibus dicta blanditiis eius ex sunt ab quas non dolore, consectetur in aliquid obcaecati, officia ut reprehenderit labore expedita. Voluptatibus dolor porro sit fugit, laudantium harum quidem assumenda totam odio dolorem iste aperiam ipsum magni minima temporibus explicabo, fugiat soluta sint, reprehenderit vero culpa, adipisci aliquid suscipit tempora. Voluptate eos quod non optio culpa similique natus ex quae assumenda excepturi.</p>
+                            <p class="reviews_owner"><b>Михаил</b>, ген.директор ПАО"Газпром".</p>
+                        </div>
+                        <div class="reviews_change">
+                            <div class="reviews_photo" data-aos="fade-in">
+                                <img src="img/reviews.png" alt="">
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo nisi esse vel nobis minima quaerat, sed, quasi ipsam vitae error culpa doloremque! Ipsum neque ut quas tempora distinctio possimus, consectetur debitis, provident, veniam laudantium minima. Minima sequi modi quo repellat, necessitatibus dicta blanditiis eius ex sunt ab quas non dolore, consectetur in aliquid obcaecati, officia ut reprehenderit labore expedita. Voluptatibus dolor porro sit fugit, laudantium harum quidem assumenda totam odio dolorem iste aperiam ipsum magni minima temporibus explicabo, fugiat soluta sint, reprehenderit vero culpa, adipisci aliquid suscipit tempora. Voluptate eos quod non optio culpa similique natus ex quae assumenda excepturi.</p>
+                            <p class="reviews_owner"><b>Михаил</b>, ген.директор ПАО"Газпром".</p>
+                        </div>
+                        <div class="reviews_change">
+                            <div class="reviews_photo" data-aos="fade-in">
+                                <img src="img/reviews.png" alt="">
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo nisi esse vel nobis minima quaerat, sed, quasi ipsam vitae error culpa doloremque! Ipsum neque ut quas tempora distinctio possimus, consectetur debitis, provident, veniam laudantium minima. Minima sequi modi quo repellat, necessitatibus dicta blanditiis eius ex sunt ab quas non dolore, consectetur in aliquid obcaecati, officia ut reprehenderit labore expedita. Voluptatibus dolor porro sit fugit, laudantium harum quidem assumenda totam odio dolorem iste aperiam ipsum magni minima temporibus explicabo, fugiat soluta sint, reprehenderit vero culpa, adipisci aliquid suscipit tempora. Voluptate eos quod non optio culpa similique natus ex quae assumenda excepturi.</p>
+                            <p class="reviews_owner"><b>Михаил</b>, ген.директор ПАО"Газпром".</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <footer>
-        <div class="footer_contacts">
+        <div class="footer_contacts" id="contacts">
             <h2>Мои контакты</h2>
             <div class="title_bar"> <img src="img/icon/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png" alt=""> </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae recusandae nisi nobis consequatur quasi corporis.</p>
@@ -464,7 +521,11 @@
             <p>Copyright © 2021 Андрей Браун. Design by Web</p>
         </div>
     </footer>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="fotorama-4.6.4/fotorama.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/myScript.js"></script>
 </body>
+
 </html>
